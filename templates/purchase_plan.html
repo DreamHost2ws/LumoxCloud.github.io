@@ -1,1 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Plan</title>
+</head>
+<body>
+    <h1>Scan QR to Pay</h1>
+    <img src="{{ qr_path }}" alt="QR Code">
+    <p>Or click here to pay: <a href="{{ payment_url }}" target="_blank">Pay Now</a></p>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
 
