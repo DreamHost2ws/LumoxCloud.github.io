@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Plan</title>
+</head>
+<body>
+    <h1>Add New Plan</h1>
+    <form method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br>
+
+        <label>Type (MC/VPS):</label><br>
+        <input type="text" name="type" required><br>
+
+        <label>Price:</label><br>
+        <input type="number" name="price" step="0.01" required><br>
+
+        <label>Resources (JSON or text):</label><br>
+        <input type="text" name="resources" required><br>
+
+        <label>Duration (days):</label><br>
+        <input type="number" name="duration" required><br><br>
+
+        <button type="submit">Add Plan</button>
+    </form>
+    <a href="{{ url_for('admin_panel') }}">Back to Admin Panel</a>
+</body>
+</html>
