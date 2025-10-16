@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Hello, {{ user.name }}!</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    
+    <h2>Your Plans</h2>
+    <ul>
+        {% for plan in user_plans %}
+        <li>{{ plan.plan_id }} - Status: {{ plan.status }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Available Plans</h2>
+    <ul>
+        {% for plan in plans %}
+        <li>{{ plan.name }} - ${{ plan.price }} <a href="#">Buy</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
 
